@@ -1,0 +1,16 @@
+# incremental data. DO NOT EDIT.
+# format is <lastModified> <length> <SHA-1> <path>
+# Encoding is UTF-8
+1380405505000 213 7fc76dd4b7d2df42241b9e3b32fd541eb1a71229 /Users/jeffwan/Documents/workspace/MsgAssistant/res/values/dimens.xml
+1380405505000 196 8236e7e4c47bc975b8c27269dd01ae5f5cb62623 /Users/jeffwan/Documents/workspace/MsgAssistant/res/values-sw600dp/dimens.xml
+1380405504000 680 c76f4caaa7a8dfe9727fa93001b3aee3b22d6716 /Users/jeffwan/Documents/workspace/MsgAssistant/res/values/styles.xml
+1380405504000 24777 83ded14cdff196da97a2e0fa16d9415228191fa7 /Users/jeffwan/Documents/workspace/MsgAssistant/res/drawable-xxhdpi/ic_launcher.png
+1380405504000 12516 98b66fdda8255fcf8ded6b705517aa48216218d6 /Users/jeffwan/Documents/workspace/MsgAssistant/res/drawable-xhdpi/ic_launcher.png
+1380405504000 3777 f8cbe1b82ece1fbd3ca3693a0f6ebc75c3358ec2 /Users/jeffwan/Documents/workspace/MsgAssistant/res/drawable-mdpi/ic_launcher.png
+1380405505000 222 75d79d3d498f005e2406d869a7efa8907618f3e3 /Users/jeffwan/Documents/workspace/MsgAssistant/res/values/strings.xml
+1380405504000 7658 8fcbd6375e2dd1996cedaaf7e3a8950364b886a0 /Users/jeffwan/Documents/workspace/MsgAssistant/res/drawable-hdpi/ic_launcher.png
+1380405505000 650 260681971b42205b898a7d7fc55b73b83e2cfcd6 /Users/jeffwan/Documents/workspace/MsgAssistant/res/layout/activity_main.xml
+1380405505000 254 1147c725f46904e29700257bdfad667a8e27c13a /Users/jeffwan/Documents/workspace/MsgAssistant/res/menu/main.xml
+1380405505000 269 2b9183863aa41af4a9ee6872efbec38dbe4ee4c0 /Users/jeffwan/Documents/workspace/MsgAssistant/res/values-sw720dp-land/dimens.xml
+1380405504000 324 aa1f5f1723de9aee2669dc44a26fbc0ce776d35f /Users/jeffwan/Documents/workspace/MsgAssistant/res/values-v11/styles.xml
+1380405504000 381 b129b276e01126de5b3b753572ac67cbfc19454c /Users/jeffwan/Documents/workspace/MsgAssistant/res/values-v14/styles.xml

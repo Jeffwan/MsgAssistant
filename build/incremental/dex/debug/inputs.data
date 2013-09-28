@@ -1,0 +1,15 @@
+# incremental data. DO NOT EDIT.
+# format is <lastModified> <length> <SHA-1> <path>
+# Encoding is UTF-8
+1380406203000 823 79b08bf78a06180b40f6693320a158b957e03dca /Users/jeffwan/Documents/workspace/MsgAssistant/build/classes/debug/com/pitt/msgassistant/MainActivity.class
+1380406203000 412 4e8025a83c94edd89e1ce139fd28a54371890d23 /Users/jeffwan/Documents/workspace/MsgAssistant/build/classes/debug/com/pitt/msgassistant/R$layout.class
+1380405504000 556198 4a6be13368bb64c5a0b0460632d228a1a915f58f /Users/jeffwan/Documents/workspace/MsgAssistant/libs/android-support-v4.jar
+1380406203000 402 f6d676e1a2702c19aeb0b56c9a596fec3d18016e /Users/jeffwan/Documents/workspace/MsgAssistant/build/classes/debug/com/pitt/msgassistant/R$id.class
+1380406203000 472 4214d8afca32ca8ec2ffd896b251e3de05db45b8 /Users/jeffwan/Documents/workspace/MsgAssistant/build/classes/debug/com/pitt/msgassistant/BuildConfig.class
+1380406203000 481 100b8ee0253cbca43b2721a823159fa09d81ca97 /Users/jeffwan/Documents/workspace/MsgAssistant/build/classes/debug/com/pitt/msgassistant/R$string.class
+1380406203000 707 318c06b159646815712b56124f732ea513e3c826 /Users/jeffwan/Documents/workspace/MsgAssistant/build/classes/debug/com/pitt/msgassistant/R.class
+1380406203000 440 4c14519b77eca66822bb1ebf827bf2772df39ea9 /Users/jeffwan/Documents/workspace/MsgAssistant/build/classes/debug/com/pitt/msgassistant/R$style.class
+1380406203000 416 831d7bed14766afa674f65983c609a94beefd3a7 /Users/jeffwan/Documents/workspace/MsgAssistant/build/classes/debug/com/pitt/msgassistant/R$drawable.class
+1380406203000 397 4119b32c73d8b0ebf72f139a771c4785bebd714b /Users/jeffwan/Documents/workspace/MsgAssistant/build/classes/debug/com/pitt/msgassistant/R$menu.class
+1380406203000 470 3812f79ca8affeb51f5d6ce52bcba25a09ee9889 /Users/jeffwan/Documents/workspace/MsgAssistant/build/classes/debug/com/pitt/msgassistant/R$dimen.class
+1380406203000 349 6d7f6f598fa8ca7553e93bf2b04ebbadab922a77 /Users/jeffwan/Documents/workspace/MsgAssistant/build/classes/debug/com/pitt/msgassistant/R$attr.class
