@@ -4,8 +4,88 @@
     <dataSet config="main" >
         <source path="/Users/jeffwan/Documents/workspace/MsgAssistant/res" >
             <file
+                name="title_button"
+                path="/Users/jeffwan/Documents/workspace/MsgAssistant/res/drawable/title_button.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="title_list_selector"
+                path="/Users/jeffwan/Documents/workspace/MsgAssistant/res/drawable/title_list_selector.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="btn_back_nor"
+                path="/Users/jeffwan/Documents/workspace/MsgAssistant/res/drawable-hdpi/btn_back_nor.9.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="btn_back_pre"
+                path="/Users/jeffwan/Documents/workspace/MsgAssistant/res/drawable-hdpi/btn_back_pre.9.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
                 name="ic_launcher"
                 path="/Users/jeffwan/Documents/workspace/MsgAssistant/res/drawable-hdpi/ic_launcher.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="mm_title_btn_compose_normal"
+                path="/Users/jeffwan/Documents/workspace/MsgAssistant/res/drawable-hdpi/mm_title_btn_compose_normal.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="mm_title_btn_focused"
+                path="/Users/jeffwan/Documents/workspace/MsgAssistant/res/drawable-hdpi/mm_title_btn_focused.9.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="mm_title_btn_keyboard_normal"
+                path="/Users/jeffwan/Documents/workspace/MsgAssistant/res/drawable-hdpi/mm_title_btn_keyboard_normal.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="mm_title_btn_normal"
+                path="/Users/jeffwan/Documents/workspace/MsgAssistant/res/drawable-hdpi/mm_title_btn_normal.9.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="mm_title_btn_pressed"
+                path="/Users/jeffwan/Documents/workspace/MsgAssistant/res/drawable-hdpi/mm_title_btn_pressed.9.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="mm_title_btn_qrcode_normal"
+                path="/Users/jeffwan/Documents/workspace/MsgAssistant/res/drawable-hdpi/mm_title_btn_qrcode_normal.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="mm_title_btn_receiver_normal"
+                path="/Users/jeffwan/Documents/workspace/MsgAssistant/res/drawable-hdpi/mm_title_btn_receiver_normal.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="mm_title_functionframe_line"
+                path="/Users/jeffwan/Documents/workspace/MsgAssistant/res/drawable-hdpi/mm_title_functionframe_line.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="mm_title_functionframe_pressed"
+                path="/Users/jeffwan/Documents/workspace/MsgAssistant/res/drawable-hdpi/mm_title_functionframe_pressed.9.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="title_bar"
+                path="/Users/jeffwan/Documents/workspace/MsgAssistant/res/drawable-hdpi/title_bar.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="title_btn_function"
+                path="/Users/jeffwan/Documents/workspace/MsgAssistant/res/drawable-hdpi/title_btn_function.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="title_function_bg"
+                path="/Users/jeffwan/Documents/workspace/MsgAssistant/res/drawable-hdpi/title_function_bg.9.png"
                 qualifiers="hdpi"
                 type="drawable" />
             <file
@@ -26,6 +106,11 @@
             <file
                 name="activity_main"
                 path="/Users/jeffwan/Documents/workspace/MsgAssistant/res/layout/activity_main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="title_popup"
+                path="/Users/jeffwan/Documents/workspace/MsgAssistant/res/layout/title_popup.xml"
                 qualifiers=""
                 type="layout" />
             <file
