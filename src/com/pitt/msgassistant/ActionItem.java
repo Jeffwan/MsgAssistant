@@ -5,13 +5,13 @@ import android.content.Context;
 import android.graphics.drawable.Drawable;
 
 /**
- * @author yangyu
- *	���������������ڲ���������Ʊ����ͼ�꣩
+ * @author Jiaxin
+ * @version 1.0
+ * @since Sep 29, 2013
  */
 public class ActionItem {
-	//����ͼƬ����
+	
 	public Drawable mDrawable;
-	//�����ı�����
 	public CharSequence mTitle;
 	
 	public ActionItem(Drawable drawable, CharSequence title){
