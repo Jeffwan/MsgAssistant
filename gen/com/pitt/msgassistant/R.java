@@ -8,6 +8,10 @@
 package com.pitt.msgassistant;
 
 public final class R {
+    public static final class anim {
+        public static final int enter=0x7f040000;
+        public static final int exit=0x7f040001;
+    }
     public static final class attr {
     }
     public static final class dimen {
@@ -17,57 +21,53 @@ public final class R {
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
-        public static final int activity_horizontal_margin=0x7f040000;
-        public static final int activity_vertical_margin=0x7f040001;
+        public static final int activity_horizontal_margin=0x7f050000;
+        public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
         public static final int btn_back_nor=0x7f020000;
         public static final int btn_back_pre=0x7f020001;
         public static final int ic_launcher=0x7f020002;
-        public static final int main_btn=0x7f020003;
-        public static final int mm_title_btn_compose_normal=0x7f020004;
-        public static final int mm_title_btn_focused=0x7f020005;
-        public static final int mm_title_btn_keyboard_normal=0x7f020006;
-        public static final int mm_title_btn_normal=0x7f020007;
-        public static final int mm_title_btn_pressed=0x7f020008;
-        public static final int mm_title_btn_qrcode_normal=0x7f020009;
-        public static final int mm_title_btn_receiver_normal=0x7f02000a;
-        public static final int mm_title_functionframe_line=0x7f02000b;
-        public static final int mm_title_functionframe_pressed=0x7f02000c;
+        public static final int mm_title_btn_compose_normal=0x7f020003;
+        public static final int mm_title_btn_focused=0x7f020004;
+        public static final int mm_title_btn_keyboard_normal=0x7f020005;
+        public static final int mm_title_btn_normal=0x7f020006;
+        public static final int mm_title_btn_pressed=0x7f020007;
+        public static final int mm_title_btn_qrcode_normal=0x7f020008;
+        public static final int mm_title_btn_receiver_normal=0x7f020009;
+        public static final int mm_title_functionframe_line=0x7f02000a;
+        public static final int mm_title_functionframe_pressed=0x7f02000b;
+        public static final int rectangle=0x7f02000c;
         public static final int title_bar=0x7f02000d;
         public static final int title_btn_function=0x7f02000e;
         public static final int title_button=0x7f02000f;
         public static final int title_function_bg=0x7f020010;
         public static final int title_list_selector=0x7f020011;
+        public static final int words_bg=0x7f020012;
     }
     public static final class id {
-        public static final int action_settings=0x7f08000d;
-        public static final int imageView1=0x7f080002;
-        public static final int imageView2=0x7f080005;
-        public static final int imageView3=0x7f080007;
-        public static final int imageView4=0x7f080009;
-        public static final int imageView5=0x7f080003;
-        public static final int llayout01=0x7f080001;
-        public static final int llayout02=0x7f080004;
-        public static final int llayout03=0x7f080006;
-        public static final int llayout04=0x7f080008;
-        public static final int main_dialog_layout=0x7f080000;
-        public static final int title=0x7f08000a;
-        public static final int title_btn=0x7f08000b;
-        public static final int title_list=0x7f08000c;
+        public static final int action_settings=0x7f090006;
+        public static final int resultmessage=0x7f090002;
+        public static final int speech_btn=0x7f090004;
+        public static final int title=0x7f090000;
+        public static final int title_btn=0x7f090001;
+        public static final int title_list=0x7f090005;
+        public static final int word_list=0x7f090003;
     }
     public static final class layout {
-        public static final int activity_dialog=0x7f030000;
-        public static final int activity_main=0x7f030001;
-        public static final int title_popup=0x7f030002;
+        public static final int activity_main=0x7f030000;
+        public static final int title_popup=0x7f030001;
+        public static final int word=0x7f030002;
     }
     public static final class menu {
-        public static final int main=0x7f070000;
+        public static final int main=0x7f080000;
     }
     public static final class string {
-        public static final int action_settings=0x7f050001;
-        public static final int app_name=0x7f050000;
-        public static final int hello_world=0x7f050002;
+        public static final int action_settings=0x7f060001;
+        public static final int app_name=0x7f060000;
+        public static final int intro=0x7f060002;
+        public static final int speech=0x7f060003;
+        public static final int word_intro=0x7f060004;
     }
     public static final class style {
         /** 
@@ -91,9 +91,9 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static final int AppBaseTheme=0x7f070000;
         /**  Application theme. 
          */
-        public static final int AppTheme=0x7f060001;
+        public static final int AppTheme=0x7f070001;
     }
 }

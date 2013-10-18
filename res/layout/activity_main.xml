@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#fcfcfc"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="#ff330066"
+    tools:context=".MainActivity">
 
     <RelativeLayout
         android:id="@+id/title"
@@ -31,5 +33,52 @@
             android:onClick="btnmainright"
             android:src="@drawable/title_btn_function" />
     </RelativeLayout>
+    
+    <EditText
+	    android:id="@+id/resultmessage"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:lines="3"
+	    android:textColor="#FFF"/>
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/word_intro"
+        android:textColor="#ffffff33"
+        android:textStyle="italic"/>
+
+    <ListView
+        android:id="@+id/word_list"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:paddingLeft="10dp"
+        android:paddingTop="3dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="3dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/words_bg"/>
+    
+   <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text ="@string/intro"
+        android:paddingTop="5dp"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:textColor="#ffffff33"/>
+
+    <Button
+        android:id="@+id/speech_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/speech"/> 
 
 </LinearLayout>
