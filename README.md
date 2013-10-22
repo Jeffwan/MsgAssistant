@@ -6,7 +6,6 @@ This is an android project of IS2470 Interactive System Design.
 
 Our project will use Google's Speech API to finish STT function and then use result to send message, email, facebook and Twitter statues.
 
-
 https://github.com/Jeffwan/MsgAssistant
 
 ## Team Member

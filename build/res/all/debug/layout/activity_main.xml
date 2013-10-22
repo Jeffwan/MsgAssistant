@@ -1,17 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#fcfcfc"
     android:orientation="vertical"
-    tools:context=".MainActivity" >
+    android:background="#ff330066"
+    tools:context=".MainActivity">
 
     <RelativeLayout
         android:id="@+id/title"
         android:layout_width="fill_parent"
         android:layout_height="45dp"
         android:background="@drawable/title_bar"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical" >
 
         <TextView
             android:layout_width="wrap_content"
@@ -19,23 +20,65 @@
             android:layout_centerInParent="true"
             android:text="MsgAssistant"
             android:textColor="#ffffff"
-            android:textSize="20sp"
-            />
+            android:textSize="20sp" />
+
         <ImageButton
             android:id="@+id/title_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="67dp"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="5dp"
             android:background="@drawable/title_button"
             android:onClick="btnmainright"
-            android:src="@drawable/title_function_bg"
-
-
-            />
+            android:src="@drawable/title_btn_function" />
     </RelativeLayout>
+    
+    <EditText
+	    android:id="@+id/resultmessage"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:lines="3"
+	    android:textColor="#FFF"/>
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/word_intro"
+        android:textColor="#ffffff33"
+        android:textStyle="italic"/>
 
+    <ListView
+        android:id="@+id/word_list"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:paddingLeft="10dp"
+        android:paddingTop="3dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="3dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/words_bg"/>
+    
+   <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text ="@string/intro"
+        android:paddingTop="5dp"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:textColor="#ffffff33"/>
 
-</LinearLayout>
-<!-- From: file:/Users/jeffwan/Documents/workspace/MsgAssistant/res/layout/activity_main.xml -->
+    <Button
+        android:id="@+id/speech_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/speech"/> 
+
+</LinearLayout><!-- From: file:/Users/jeffwan/Documents/workspace/MsgAssistant/res/layout/activity_main.xml -->

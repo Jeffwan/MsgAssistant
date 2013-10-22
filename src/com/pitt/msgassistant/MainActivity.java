@@ -114,8 +114,8 @@ public class MainActivity extends Activity implements OnClickListener, OnInitLis
 				titlePopup.show(v);
 			}
 		});
-				
-		titlePopup = new TitlePopup(this, LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+		
+		titlePopup = new TitlePopup(this, LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT, editText);
 	}	
 
 	private void initData(){
@@ -136,31 +136,7 @@ public class MainActivity extends Activity implements OnClickListener, OnInitLis
 		}
 	}	
 	
-	private void sendMail() {
-        Log.i(LOG,"sendMail funciton called");
-        String mailBody = editText.getText().toString();
-
-        // it also include the Message App, what it will call depends on client's apps , we may need to customize the return list.
-        Intent intent = new Intent(Intent.ACTION_SEND);
-        intent.setType("text/plain");
-        intent.putExtra(Intent.EXTRA_EMAIL, "emailaddress@emailaddress.com");
-        intent.putExtra(Intent.EXTRA_SUBJECT, "This is a email from MsgAssistant ");
-        intent.putExtra(Intent.EXTRA_TEXT, mailBody);
-        startActivity(intent);
-//        startActivity(Intent.createChooser(intent, "Send Email"));
-    }
-
-    private void sendMsg() {
-        Log.i(LOG,"sendMsg function called");
-        String msgBody = editText.getText().toString();
-
-        //Intent intent = new Intent( Intent.ACTION_VIEW, Uri.parse( "sms:" + "" ) );
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.putExtra( "sms_body", msgBody);
-        intent.setType("vnd.android-dir/mms-sms");
-        startActivity(intent);
-    }
-    
+      
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         // We use requestCode to justify where it comes from

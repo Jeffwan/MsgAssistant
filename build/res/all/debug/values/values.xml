@@ -7,7 +7,9 @@
     <!-- From: file:/Users/jeffwan/Documents/workspace/MsgAssistant/res/values/strings.xml -->
     <string name="action_settings">Settings</string>
     <string name="app_name">MsgAssistant</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="intro">Press the button to speak!</string>
+    <string name="speech">Speak now!</string>
+    <string name="word_intro">Suggested words …</string>
     <!-- From: file:/Users/jeffwan/Documents/workspace/MsgAssistant/res/values/styles.xml -->
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--
@@ -18,7 +20,11 @@
     </style>
 
     <style name="AppTheme" parent="AppBaseTheme">
+
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowEnterAnimation">@anim/enter</item>
+        <item name="android:windowExitAnimation">@anim/exit</item>
     </style>
 
 </resources>
