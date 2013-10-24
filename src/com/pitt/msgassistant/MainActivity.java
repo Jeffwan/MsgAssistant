@@ -84,13 +84,14 @@ public class MainActivity extends Activity implements OnClickListener, OnInitLis
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 TextView wordView = (TextView)view;
                 String wordChosen = (String)wordView.getText();
-                Log.v(LOG,"chosen: " + wordChosen);
+                Log.i(LOG, "chosen: " + wordChosen);
                 Toast.makeText(MainActivity.this, "You said: "+ wordChosen,1).show();
 
                 //int speak(String text, int queueMode, HashMap<String, String> params)  call TTS function
                 repeatTTS.speak("You said: " +wordChosen,TextToSpeech.QUEUE_FLUSH,null);
                 lastWord = editText.getText().toString();
-                if (lastWord == "") {
+                Log.i(LOG, lastWord);
+                if (lastWord.equals("")) {
                 	editText.setText(wordChosen);
 				}else {
 					editText.setText(editText.getText().toString()+", "+wordChosen);
@@ -193,5 +194,10 @@ public class MainActivity extends Activity implements OnClickListener, OnInitLis
             //repeatTTS.setLanguage(Locale.CHINA);
             //repeatTTS.setLanguage(Locale.CHINESE);
 	}
-	
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
 }

@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="MsgAssistant"
-            android:textColor="#ffffff"
+            android:textColor="#FFF"
             android:textSize="20sp" />
 
         <ImageButton
@@ -74,11 +74,11 @@
         android:gravity="center"
         android:textColor="#ffffff33"/>
 
-    <Button
+   <Button
         android:id="@+id/speech_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/speech"/> 
+        android:text="Speak" />
 
 </LinearLayout>
