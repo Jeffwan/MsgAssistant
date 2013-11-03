@@ -110,13 +110,9 @@ public class TitlePopup extends PopupWindow {
                         sendMail();
                         break;
                     case 2:
-                        Log.i(TAG, "Facebook clicked");
+                        Log.i(TAG, "Social clicked");
                         sendToSocial();
                         break;
-                    case 3:
-                        Log.i(TAG, "Twitter clicked");
-                        break;
-
                     default:
                         break;
                 }
@@ -126,8 +122,8 @@ public class TitlePopup extends PopupWindow {
             }
         });
 	}
-	
-	public void show(View view){
+
+    public void show(View view){
 		view.getLocationOnScreen(mLocation);
 		
 		mRect.set(mLocation[0], mLocation[1], mLocation[0] + view.getWidth(), mLocation[1] + view.getHeight());
@@ -212,6 +208,39 @@ public class TitlePopup extends PopupWindow {
 		public void onItemClick(ActionItem item , int position);
 	}
 
+    private void sendMsg() {
+
+        String msgBody = editText.getText().toString();
+        Log.i(TAG, "nothings:? "+editText.getText());
+
+        /*General method -- workds fine on emulartor bu not works on device (Android 4.2.2) */
+        //Intent intent = new Intent( Intent.ACTION_VIEW, Uri.parse( "smsto:" + "" ) );
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse("sms:"));
+        intent.putExtra( "sms_body", msgBody);
+
+        //intent.setType("vnd.android-dir/mms-sms");
+        //intent.putExtra( Intent.EXTRA_TEXT, msgBody);
+        //Intent intent = new Intent(Intent.ACTION_SENDTO,Uri.parse("smsto:"));
+        //intent.putExtra(Intent.EXTRA_TEXT, msgBody);
+
+        /* General method -- workds fine on emulartor as well as device (Android 4.2.2)
+         * also not works in my Nexus 7 (a stupid error -- tablet can not send message)
+         *  */
+//        Intent smsIntent = new Intent(Intent.ACTION_SENDTO);
+//        smsIntent.addCategory(Intent.CATEGORY_DEFAULT);
+//        smsIntent.setType("vnd.android-dir/mms-sms");
+//        smsIntent.setData(Uri.parse("sms:"));
+//        smsIntent.putExtra( "sms_body", msgBody);
+
+        try {
+            mContext.startActivity(intent);
+        } catch (android.content.ActivityNotFoundException ex) {
+            //throw new ActivityNotFoundException(ex.toString());
+            Toast.makeText(mContext, "Your device do not support SMS", Toast.LENGTH_SHORT).show();
+        }
+    }
+
     private void sendMail() {
         Log.i(TAG,"sendMail funciton called");
         String mailBody = editText.getText().toString();
@@ -254,42 +283,7 @@ public class TitlePopup extends PopupWindow {
         	
 		}
     }       
-        
-    private void sendMail2() {
-        Log.i(TAG,"sendMail2 funciton called");
-        String mailBody = editText.getText().toString();
-        
-        List<Intent> targetedShareIntents = new ArrayList<Intent>();
-        Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
-        sharingIntent.setType("text/plain");
-        List<ResolveInfo> activityList = mContext.getPackageManager().queryIntentActivities(sharingIntent, 0);
-        
-        for(final ResolveInfo info : activityList) {
-        	String packageName = info.activityInfo.packageName;
-		    Intent targetedShareIntent = new Intent(android.content.Intent.ACTION_SEND);
-		    targetedShareIntent.setType("text/plain");
-		    targetedShareIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "This is an email from MsgAssistant");
-		    
-		    if (TextUtils.equals(packageName, "com.android.mms") ||
-		    		TextUtils.equals(packageName, "com.android.mms") ||
-		    		TextUtils.equals(packageName, "com.android.mms") ||
-		    		TextUtils.equals(packageName, "com.yahoo.mail")){
-		        targetedShareIntent.putExtra(Intent.EXTRA_TEXT, mailBody); 
-    			Log.i(TAG, "email intent contains");
-    			targetedShareIntent.putExtra(Intent.EXTRA_SUBJECT, "This is from MsgAssistant ");
-    			targetedShareIntent.putExtra(Intent.EXTRA_TEXT, mailBody);  
-    			targetedShareIntent.setPackage(packageName);
-    			targetedShareIntents.add(targetedShareIntent);
-		     }
-		    targetedShareIntent.setPackage(packageName);
-		    targetedShareIntents.add(targetedShareIntent);
-        }
-        
-        Intent chooserIntent = Intent.createChooser(targetedShareIntents.remove(0), "Send To Email");
-        chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, targetedShareIntents.toArray(new Parcelable[]{}));
-        mContext.startActivity(chooserIntent);
-    } 
-    
+
     private void sendToSocial() {
         Log.i(TAG,"sendToSocial funciton called");
         String msgBody = editText.getText().toString();
@@ -303,7 +297,7 @@ public class TitlePopup extends PopupWindow {
         	String packageName = info.activityInfo.packageName;
 		    Intent targetedShareIntent = new Intent(android.content.Intent.ACTION_SEND);
 		    targetedShareIntent.setType("text/plain");
-		    targetedShareIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "This is an email from MsgAssistant");
+		    targetedShareIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "This is a message from MsgAssistant");
 		    
 		    if (TextUtils.equals(packageName, "com.sina.weibo") ||
 		    	TextUtils.equals(packageName, "com.evernote") ||
@@ -323,7 +317,72 @@ public class TitlePopup extends PopupWindow {
         chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, targetedShareIntents.toArray(new Parcelable[]{}));
         mContext.startActivity(chooserIntent);
     }
-        
+
+    private void sendToOffice() {
+        Log.i(TAG,"sendToOffice funciton called");
+        String msgBody = editText.getText().toString();
+
+        List<Intent> targetedShareIntents = new ArrayList<Intent>();
+        Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+        sharingIntent.setType("text/plain");
+        List<ResolveInfo> activityList = mContext.getPackageManager().queryIntentActivities(sharingIntent, 0);
+
+        for(final ResolveInfo info : activityList) {
+            String packageName = info.activityInfo.packageName;
+            Intent targetedShareIntent = new Intent(android.content.Intent.ACTION_SEND);
+            targetedShareIntent.setType("text/plain");
+            targetedShareIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "This is a message from MsgAssistant");
+
+            if (TextUtils.equals(packageName, "com.evernote")) {
+
+                targetedShareIntent.putExtra(Intent.EXTRA_SUBJECT, "This is from MsgAssistant ");
+                targetedShareIntent.putExtra(Intent.EXTRA_TEXT, msgBody);
+                targetedShareIntent.setPackage(packageName);
+                targetedShareIntents.add(targetedShareIntent);
+            }
+        }
+
+        Intent chooserIntent = Intent.createChooser(targetedShareIntents.remove(0), "Send To Office Tools");
+        chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, targetedShareIntents.toArray(new Parcelable[]{}));
+        mContext.startActivity(chooserIntent);
+    }
+
+
+    private void sendMail2() {
+        Log.i(TAG,"sendMail2 funciton called");
+        String mailBody = editText.getText().toString();
+
+        List<Intent> targetedShareIntents = new ArrayList<Intent>();
+        Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+        sharingIntent.setType("text/plain");
+        List<ResolveInfo> activityList = mContext.getPackageManager().queryIntentActivities(sharingIntent, 0);
+
+        for(final ResolveInfo info : activityList) {
+            String packageName = info.activityInfo.packageName;
+            Intent targetedShareIntent = new Intent(android.content.Intent.ACTION_SEND);
+            targetedShareIntent.setType("text/plain");
+            targetedShareIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "This is an email from MsgAssistant");
+
+            if (TextUtils.equals(packageName, "com.android.mms") ||
+                    TextUtils.equals(packageName, "com.android.mms") ||
+                    TextUtils.equals(packageName, "com.android.mms") ||
+                    TextUtils.equals(packageName, "com.yahoo.mail")){
+                targetedShareIntent.putExtra(Intent.EXTRA_TEXT, mailBody);
+                Log.i(TAG, "email intent contains");
+                targetedShareIntent.putExtra(Intent.EXTRA_SUBJECT, "This is from MsgAssistant ");
+                targetedShareIntent.putExtra(Intent.EXTRA_TEXT, mailBody);
+                targetedShareIntent.setPackage(packageName);
+                targetedShareIntents.add(targetedShareIntent);
+            }
+            targetedShareIntent.setPackage(packageName);
+            targetedShareIntents.add(targetedShareIntent);
+        }
+
+        Intent chooserIntent = Intent.createChooser(targetedShareIntents.remove(0), "Send To Email");
+        chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, targetedShareIntents.toArray(new Parcelable[]{}));
+        mContext.startActivity(chooserIntent);
+    }
+
     private void sendMail3() {
         Log.i(TAG,"sendMail funciton called");
         String mailBody = editText.getText().toString();
@@ -337,38 +396,7 @@ public class TitlePopup extends PopupWindow {
         //startActivity(Intent.createChooser(intent, "Send Email"));
     }
 
-    private void sendMsg() {
 
-        String msgBody = editText.getText().toString();
-        Log.i(TAG, "nothings:? "+editText.getText());
-        
-        /*General method -- workds fine on emulartor bu not works on device (Android 4.2.2) */
-        //Intent intent = new Intent( Intent.ACTION_VIEW, Uri.parse( "smsto:" + "" ) );
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse("sms:"));
-        intent.putExtra( "sms_body", msgBody);
-          
-        //intent.setType("vnd.android-dir/mms-sms");
-        //intent.putExtra( Intent.EXTRA_TEXT, msgBody);
-        //Intent intent = new Intent(Intent.ACTION_SENDTO,Uri.parse("smsto:"));
-        //intent.putExtra(Intent.EXTRA_TEXT, msgBody);
-        
-        /* General method -- workds fine on emulartor as well as device (Android 4.2.2) 
-         * also not works in my Nexus 7 (a stupid error -- tablet can not send message)
-         *  */
-//        Intent smsIntent = new Intent(Intent.ACTION_SENDTO);
-//        smsIntent.addCategory(Intent.CATEGORY_DEFAULT);
-//        smsIntent.setType("vnd.android-dir/mms-sms");
-//        smsIntent.setData(Uri.parse("sms:")); 
-//        smsIntent.putExtra( "sms_body", msgBody);
-       
-	      try {
-	    	  mContext.startActivity(intent);
-	      } catch (android.content.ActivityNotFoundException ex) {
-	    	  //throw new ActivityNotFoundException(ex.toString());
-	    	  Toast.makeText(mContext, "Your device do not support SMS", Toast.LENGTH_SHORT).show();
-	      }      
-    }
 
 
 }

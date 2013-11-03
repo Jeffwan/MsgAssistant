@@ -33,7 +33,7 @@ import android.widget.Toast;
  */
 public class MainActivity extends Activity implements OnClickListener, OnInitListener{
 	
-	private ImageButton titleBtn;
+	private ImageButton titleBtn,speechBtn;
 	private TitlePopup titlePopup;
 	
     //voice recognition and general variables
@@ -44,7 +44,6 @@ public class MainActivity extends Activity implements OnClickListener, OnInitLis
     private int MY_DATA_CHECK_CODE = 0;
     private TextToSpeech repeatTTS;
     private ListView wordlist;
-    private Button speechBtn;
     private EditText editText;
     private String lastWord;
 	
@@ -105,7 +104,7 @@ public class MainActivity extends Activity implements OnClickListener, OnInitLis
 
 	private void initView(){
 		titleBtn = (ImageButton) findViewById(R.id.title_btn);
-        speechBtn = (Button) this.findViewById(R.id.speech_btn);
+        speechBtn = (ImageButton) this.findViewById(R.id.speech_btn);
         wordlist = (ListView) this.findViewById(R.id.word_list);
         editText = (EditText) this.findViewById(R.id.resultmessage);
 		
@@ -122,8 +121,7 @@ public class MainActivity extends Activity implements OnClickListener, OnInitLis
 	private void initData(){
 		titlePopup.addAction(new ActionItem(this, "Message", R.drawable.mm_title_btn_compose_normal));
 		titlePopup.addAction(new ActionItem(this, "Email", R.drawable.mm_title_btn_receiver_normal));
-		titlePopup.addAction(new ActionItem(this, "Facebook", R.drawable.mm_title_btn_keyboard_normal));
-		titlePopup.addAction(new ActionItem(this, "Twitter",  R.drawable.mm_title_btn_qrcode_normal));
+		titlePopup.addAction(new ActionItem(this, "Social", R.drawable.mm_title_btn_keyboard_normal));
 	}
 
 

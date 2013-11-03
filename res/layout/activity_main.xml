@@ -38,8 +38,10 @@
 	    android:id="@+id/resultmessage"
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:singleLine="false"
 	    android:lines="3"
-	    android:textColor="#FFF"/>
+	    android:textColor="#FFF" />
     
     <TextView
         android:layout_width="fill_parent"
@@ -74,11 +76,13 @@
         android:gravity="center"
         android:textColor="#ffffff33"/>
 
-   <Button
+   <ImageButton
         android:id="@+id/speech_btn"
-        android:layout_width="match_parent"
+        android:layout_width="67dp"
         android:layout_height="wrap_content"
+        android:src="@drawable/microphone"
         android:gravity="center"
-        android:text="Speak" />
+        android:background="#ff330066"
+        android:layout_gravity="center_horizontal"/>
 
 </LinearLayout>
