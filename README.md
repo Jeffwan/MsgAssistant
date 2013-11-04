@@ -12,13 +12,22 @@ https://github.com/Jeffwan/MsgAssistant
 
 ## Team Member
 
-Fanbei Ming, Jiaxin Shan, Jingya Wang, Junjing Ma, Lihua Ren.\
+Fanbei Ming, Jiaxin Shan, Jingya Wang, Junjing Ma, Lihua Ren.
 
 ## Tech notes
 
 * Speech API     -- Study and use Google's in build Speech Recognization instead of thrid party libs.
 * Popupwindow    -- Inplement the popupwindow and set click listener.
 * Intent Filter  -- Using custom intent filter to redirect uset to system message, email and social app.
+
+## ScreenShots
+
+![](https://lh3.googleusercontent.com/-3jZhHolt2VM/UndIdEDAmQI/AAAAAAAAAT8/j1Aj-BEgkag/w514-h822-no/Screenshot_2013-11-04-01-29-07.png)
+
+![](https://lh3.googleusercontent.com/-3jZhHolt2VM/UndIdEDAmQI/AAAAAAAAAT8/j1Aj-BEgkag/w514-h822-no/Screenshot_2013-11-04-01-29-07.png)
+
+![](https://lh5.googleusercontent.com/-RoeJvKCnz1c/UndIdESiH-I/AAAAAAAAAT4/9OSrdZfIbKM/w514-h822-no/Screenshot_2013-11-04-01-34-43.png)
+
 
 ## Licence
 
