@@ -10,15 +10,22 @@ and Twitter. We also implement TTS function that User can hear the words which t
 
 https://github.com/Jeffwan/MsgAssistant
 
-## Team Member
-
-Fanbei Ming, Jiaxin Shan, Jingya Wang, Junjing Ma, Lihua Ren.
-
 ## Tech notes
 
 * Speech API     -- Study and use Google's in build Speech Recognization instead of thrid party libs.
 * Popupwindow    -- Inplement the popupwindow and set click listener.
 * Intent Filter  -- Using custom intent filter to redirect uset to system message, email and social app.
+* Multiple screens -- Use 9-patch png format to support multiple screens.
+
+## Development Tools
+Android Studio 0.3.0, Target SDKAndroid 4.2.2(API 17)
+
+## Team Member
+
+Fanbei Ming, Jiaxin Shan, Jingya Wang, Junjing Ma, Lihua Ren.
+* Android User Interface Design – mainly on popupwindow 
+* Google Speech Recognization study and use. 
+* Intent filter implementation to divide share groups.
 
 ## ScreenShots
 
